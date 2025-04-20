@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:54:30 by ilevy             #+#    #+#             */
-/*   Updated: 2025/04/20 13:22:09 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/04/20 13:55:04 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,18 @@ int main(void)
 		sp.addNumber(11);
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+
+	Span sp1 = Span(10000);
+	try
+	{
+		sp1.fillContainer();
+		std::cout << sp1.shortestSpan() << std::endl;
+		std::cout << sp1.longestSpan() << std::endl;
 	}
 	catch(const std::exception& e)
 	{

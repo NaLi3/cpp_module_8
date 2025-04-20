@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:54:26 by ilevy             #+#    #+#             */
-/*   Updated: 2025/04/20 13:21:42 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/04/20 13:54:46 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,26 @@ int		Span::longestSpan( void )
 		std::vector <int> copy = this->_container;
 		std::sort(copy.begin(), copy.end(), std::greater<int>());
 		return (*copy.begin());
+	}
+}
+
+int		randInt( unsigned int N )
+{
+	int	i;
+
+	i = rand() % N + 1;
+	return (i);
+}
+
+void	Span::fillContainer( void )
+{
+	unsigned int	start;
+
+	start = this->_container.size();
+	while (start < this->_N)
+	{
+		this->addNumber(randInt(this->_N));
+		start++;
 	}
 }
 

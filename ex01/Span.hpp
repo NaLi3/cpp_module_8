@@ -6,7 +6,7 @@
 /*   By: ilevy <ilevy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 14:54:32 by ilevy             #+#    #+#             */
-/*   Updated: 2025/04/20 13:21:02 by ilevy            ###   ########.fr       */
+/*   Updated: 2025/04/20 13:25:27 by ilevy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class Span
 		~Span( void );
 
 		void	addNumber( int new_number );
+		void	fillContainer( void );
 		int		shortestSpan( void );
 		int		longestSpan( void );
 
